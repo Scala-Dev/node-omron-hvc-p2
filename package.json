@@ -94,5 +94,5 @@
     "build:dev": "npx webpack --mode development",
     "build:prod": "npx webpack --mode production"
   },
-  "version": "0.1.2"
+  "version": "0.1.3"
 }
