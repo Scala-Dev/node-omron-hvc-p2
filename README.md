@@ -1,6 +1,8 @@
 node-omron-hvc-p2
 ===============
 
+NOTE - This fork is a work in progress - not suggessted for production - the support for sharp currently has some huge memory leaks due to how buffers are handled in node - you've been warned! :)
+
 [[Japanese (日本語)](README_ja.md)]
 
 The node-omron-hvc-p2 is a Node.js module which allows you to communicate with the image sensing device "[OMRON Human Vision Components (HVC-P2)](http://www.omron.com/ecb/products/mobile/hvc_p2/)" through a USB serial port.
@@ -24,11 +26,14 @@ The node-omron-hvc-p2 supports all functions supported by the [HVC-P2](http://ww
 
 ## Dependencies
 
-* [Node.js](https://nodejs.org/en/) 6 +
-* [serialport](https://github.com/EmergingTechnologyAdvisors/node-serialport) 5.0.0 +
-  * If the serialport module has been already installed in you host computer, check the version. The node-omron-hvc-p2 now does not support older versions of the serialport module than 5.0.0 .
+* [Node.js](https://nodejs.org/en/) 7 +  (serialport dependency requires 7+)
+* [serialport](https://github.com/EmergingTechnologyAdvisors/node-serialport) 6.0.0 +
+  * If the serialport module has been already installed in you host computer, check the version. The node-omron-hvc-p2 now does not support older versions of the serialport module prior to 5.0.0 .
 * [node-gd](https://github.com/y-a-v-a/node-gd) (Optional, for Linux, Mac)
 * [lwip](https://github.com/EyalAr/lwip) (Optional, for Windows)
+* [jimp](https://https://github.com/oliver-moran/jimp) (Optional, for Windows - easier to install than outdated lwip dependencies)
+* [sharp](https://github.com/lovell/sharp) (Optional, for Windows - coming next - for much better performance than lwip and jimp)
+
 
 ## Installation
 
@@ -38,7 +43,9 @@ $ npm install serialport
 $ npm install node-omron-hvc-p2
 ```
 
-The node-omron-hvc-p2 requires an image processing module in order to create images captured by the HVC-P2. For Linux and Mac, the [node-gd](https://github.com/y-a-v-a/node-gd) is required. For Windows, the [lwip](https://github.com/EyalAr/lwip) is required.
+The node-omron-hvc-p2 requires an image processing module in order to create images captured by the HVC-P2. For Linux and Mac, the [node-gd](https://github.com/y-a-v-a/node-gd) is required.
+For Windows, the [jimp](https://https://github.com/oliver-moran/jimp) or [lwip](https://github.com/EyalAr/lwip) libs (one or the other) is required. Adding in support for [sharp](https://github.com/lovell/sharp) which should provide much better performance than lwip and jimp on Windows)
+
 
 If you don't need to get images captured by the HVC-P2, the image processing modules are not required.
 
@@ -71,10 +78,14 @@ $ npm install node-gd
 
 ### Windows
 
-It is recommended to install [lwip](https://github.com/EyalAr/lwip).
+It is recommended to install [lwip](https://github.com/EyalAr/lwip) or [jimp](https://https://github.com/oliver-moran/jimp) if you have issues getting lwip to install/compile.
 
 ```
 $ npm install lwip
+```
+or
+```
+$ npm install jimp
 ```
 
 ---------------------------------------

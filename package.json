@@ -1,18 +1,70 @@
 {
-  "name": "node-omron-hvc-p2",
-  "version": "0.1.2",
+  "_from": "git+https://github.com/ScalaInc/node-omron-hvc-p2.git",
+  "_id": "node-omron-hvc-p2@0.1.2",
+  "_inBundle": false,
+  "_location": "/node-omron-hvc-p2",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/ScalaInc/node-omron-hvc-p2.git",
+    "rawSpec": "https://github.com/ScalaInc/node-omron-hvc-p2.git",
+    "saveSpec": "git+https://github.com/ScalaInc/node-omron-hvc-p2.git",
+    "fetchSpec": "https://github.com/ScalaInc/node-omron-hvc-p2.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/ScalaInc/node-omron-hvc-p2.git#45fe6ad53eb2e60426a8d6940cb908a5283deead",
+  "_spec": "https://github.com/ScalaInc/node-omron-hvc-p2.git",
+  "_where": "/Users/rhall/Documents/git_repos/github/svcs-target-poc-omron",
+  "author": {
+    "name": "Futomi Hatano",
+    "email": "futomi.hatano@gmail.com",
+    "url": "https://github.com/futomi"
+  },
+  "contributors": [
+    {
+      "name": "Robert M. Hall",
+      "url": "https://github.com/rmhall"
+    },
+    {
+      "name": "Chris Barr",
+      "url": "https://github.com/cbarr-scala"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/ScalaInc/node-omron-hvc-p2/issues"
+  },
+  "bundleDependencies": [],
+  "dependencies": {
+    "perf_hooks": "latest",
+    "serialport": "^6.0.5",
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0"
+  },
+  "engines": {
+    "node": ">7"
+  },
+  "deprecated": false,
   "description": "The node-omron-hvc-p2 is a Node.js module which allows you to communicate with the image sensing device \"OMRON Human Vision Components (HVC-P2)\" through a USB serial port.",
-  "main": "./lib/HvcP2.js",
+  "directories": {
+    "lib": "./lib"
+  },
   "files": [
     "lib",
     "images"
   ],
-  "directories": {
-    "lib": "./lib"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "homepage": "https://github.com/futomi",
   "keywords": [
     "OMRON",
     "Human Vision Components",
@@ -29,15 +81,18 @@
     "EXPRESSION ESTIMATION",
     "FACE RECOGNITION"
   ],
-  "homepage": "https://github.com/futomi",
-  "author": "Futomi Hatano <futomi.hatano@gmail.com> (https://github.com/futomi)",
+  "readmeFilename": "README.md",
   "license": "MIT",
+  "main": "./lib/HvcP2.js",
+  "name": "node-omron-hvc-p2",
   "repository": {
     "type": "git",
-    "url": "https://github.com/futomi/node-omron-hvc-p2.git"
+    "url": "git+https://github.com/ScalaInc/node-omron-hvc-p2.git"
   },
-  "readmeFilename": "README.md",
-  "dependencies": {
-    "serialport": ">=5.0.0"
-  }
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:dev": "npx webpack --mode development",
+    "build:prod": "npx webpack --mode production"
+  },
+  "version": "0.1.2"
 }
