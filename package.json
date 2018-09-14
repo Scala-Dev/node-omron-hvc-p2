@@ -49,5 +49,5 @@
     "build:dev": "webpack --mode development",
     "build:prod": "webpack --mode production"
   },
-  "version": "0.1.4"
+  "version": "0.1.5"
 }
