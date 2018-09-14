@@ -15,7 +15,8 @@ module.exports = (env, argv) => {
     target: 'node',
     entry: './lib/HvcP2.js',
     output: {
-      filename: 'hvcp2.js'
+      filename: 'vision-lib.js',
+      libraryTarget: 'umd'
     },
     externals: nodeModules,
     mode: argv.mode,
