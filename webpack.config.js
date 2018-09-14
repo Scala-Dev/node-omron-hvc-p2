@@ -17,8 +17,8 @@ module.exports = (env, argv) => {
     output: {
       filename: 'hvcp2.js'
     },
-    mode: argv.mode,
     externals: nodeModules,
+    mode: argv.mode,
     module: {
       rules: [
         {
